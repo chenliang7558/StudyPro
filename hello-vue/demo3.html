@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vueDemo</title>
+</head>
+<body>
+<div id="app">
+    <input type="checkbox" v-model="language" value="Java" />Java<br/>
+    <input type="checkbox" v-model="language" value="PHP" />PHP<br/>
+    <input type="checkbox" v-model="language" value="Swift" />Swift<br/>
+    <h1>
+        <!--v-model双向绑定-->
+        你选择了：{{language.join(',')}}
+    </h1>
+</div>
+</body>
+<script src="node_modules/vue/dist/vue.js"></script>
+<script>
+    // 创建vue实例
+    var vm = new Vue({
+        el: "#app",
+        data:{
+            language: []
+        }
+    });
+
+</script>
+
+
+</html>

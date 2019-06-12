@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vueDemo</title>
+</head>
+<body>
+<div id="app">
+   <!--<input v-model="num" width="20%">-->
+    <button v-on:mouseover="num++">点我</button>
+    <h2>{{name}}，仙女！！！,有{{num}}人为他着迷。</h2>
+</div>
+</body>
+<script src="node_modules/vue/dist/vue.js"></script>
+<script>
+    // 创建vue实例
+    var app = new Vue({
+        el: "#app", // el即element，该vue实例要渲染的页面元素
+        data: { // 渲染页面需要的数据
+            name: "xf",
+            num: 0
+        }
+    });
+
+</script>
+
+
+</html>
